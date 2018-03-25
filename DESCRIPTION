@@ -1,7 +1,7 @@
 Package: futools
 Type: Package
 Title: vcd::mosaic Japanese wrapper
-Version: 0.1.1
+Version: 0.1.2
 Author: Who wrote it
 Maintainer: The package maintainer <kazuo.fujimoto2007@gmail.com>
 Description: More about what it does (maybe more than one line)
