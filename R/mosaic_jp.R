@@ -14,7 +14,7 @@
 # やりなおし
 
 
-#library(grid)
+library(grid)
 my.largs <- list(gp_labels = gpar(fontsize =10, fontfamily = "sans"),
                  gp_varnames = gpar(fontsize = 12, fontfamily = "sans"),
                  gp_text=gpar(fontsize =10, fontfamily = "sans"))
