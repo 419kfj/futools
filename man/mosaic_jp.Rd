@@ -8,6 +8,7 @@ mosaic_jp1()
 mosaic_jp*
 }
 \examples{
+
 # data set
 data(HairEyeColor_jp)
 
@@ -20,4 +21,9 @@ mosaic_jp2(HairEyeColor_jp)
 # set cell color by color matrix
 cset <- t(matrix(rep(brewer.pal(4,"Blues"),2),ncol=2))
 mosaic_jp2(HairEyeColor_jp,gp=gpar(fill=cset,col=0))
+}
+
+\references{
+- The Strucplot Framework: Visualizing Multi-way Contingency Tables with vcd:
+https://www.jstatsoft.org/index.php/jss/article/view/v017i03/v17i03.pdf
 }
