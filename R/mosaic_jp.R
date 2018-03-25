@@ -24,11 +24,12 @@ my.main <- gpar(fontsize = 14,fontfamily = "sans")
 # sub title  text_gp <- gpar(fontsize = 12,fontfamily = “sans”)# facet   TR
 # mosaic_jp     L
 
-mosaic_jp0 <- function(.tbl){
+mosaic_jp0 <- function(.tbl,...){
   mosaic(.tbl,
          labeling_args=my.largs,
          main_gp = my.main,
-         sub_gp = my.sub,)
+         sub_gp = my.sub,
+         ...)
 }
 
 mosaic_jp1 <- function(.tbl,mtitle="mosaic_jp",colset="Set3"){
