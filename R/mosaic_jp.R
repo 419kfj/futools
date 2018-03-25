@@ -18,7 +18,7 @@
 my.largs <- list(gp_labels = gpar(fontsize =10, fontfamily = "sans"),
                  gp_varnames = gpar(fontsize = 12, fontfamily = "sans"),
                  gp_text=gpar(fontsize =10, fontfamily = "sans"))
-my.main <- gpar(fontsize = 14,fontfamily = "sans")
+my.main <- grid::gpar(fontsize = 14,fontfamily = "sans")
 # main title  my.sub <- gpar(fontsize = 10,fontfamily = "sans"")
 # sub title  text_gp <- gpar(fontsize = 12,fontfamily = “sans”)# facet   TR
 # mosaic_jp     L
