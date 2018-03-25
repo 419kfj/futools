@@ -10,4 +10,4 @@ License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 Imports:
-    grid (>= 3.4.2)
+    vcd (>= 1.4-3)
