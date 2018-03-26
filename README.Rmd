@@ -16,6 +16,14 @@ knitr::opts_chunk$set(
 
 このPackageは、vcdが提供するmosaic などのグラフ生成ツールで日本語を使えるようにするものです。
 
+カテゴリカルデータの可視化には、Michael Friendly先生たちのvcd（その名もずばり、Visualizing of Categorical Data：カテゴリカルデータの可視化）が有効なことはいろいろなところでこのパッケージが紹介されていることからもわかります。ただ、グラフィックがbase graphics ではなく、（latticeやggplot2でも使われている）gridであることもあり、日本語表示が簡単ではありませんでした。
+
+しかし、gpar に日本語フォントをしていすることでmosaicなどのvcd  function で日本語がつかえるようになります。
+
+当初は、一々mosaic()の中にパラメータで書いていたのですが、さすがに面倒になったので、wrapper をパッケージにしてみました。
+
+Github からインストールできますので、使ってみてください。
+
 ## Installation
 
 githubから以下のようにしてインストールできます：
