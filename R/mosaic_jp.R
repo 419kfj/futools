@@ -63,8 +63,8 @@ mosaic_jp2 <- function(.tbl,mtitle="mosaic_jp",...){
 }
 
 #
-#
-#
+# doubledecker でも日本語を使う。
+# doubledecker はmosaicのwrapperなので、同じ設定でよい
 
 doubledecker_jp <- function(...){
   vcd::doubledecker(
