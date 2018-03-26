@@ -9,6 +9,11 @@ mosaic_jp*
 }
 \examples{
 
+# installation
+
+if(!require(devtools)) install.packages("devtools")
+devtools::install_github("419kfj/futools")
+
 # data set
 data(HairEyeColor_jp)
 
