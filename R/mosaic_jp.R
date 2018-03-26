@@ -62,3 +62,12 @@ mosaic_jp2 <- function(.tbl,mtitle="mosaic_jp",...){
          labeling = labeling_values)
 }
 
+#
+#
+#
+
+doubledecker_jp <- function(...){
+  vcd::doubledecker(
+    labeling_args=my.largs,
+    ...)
+}
