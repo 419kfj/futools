@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 カテゴリカルデータの可視化には、Michael Friendly先生たちのvcd（その名もずばり、Visualizing of Categorical Data：カテゴリカルデータの可視化）が有効なことはいろいろなところでこのパッケージが紹介されていることからもわかります。ただ、グラフィックがbase graphics ではなく、（latticeやggplot2でも使われている）gridであることもあり、日本語表示が簡単ではありませんでした。
 
-しかし、gpar に日本語フォントをしていすることでmosaicなどのvcd  function で日本語がつかえるようになります。
+しかし、gpar に日本語フォントを指定することでmosaicなどのvcd function で日本語がつかえるようになります。
 
 当初は、一々mosaic()の中にパラメータで書いていたのですが、さすがに面倒になったので、wrapper をパッケージにしてみました。
 
@@ -38,6 +38,9 @@ devtools::install_github("419kfj/futools")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
+library(vcd)
+library(RColorBrewer)
+
 # data set
 data(HairEyeColor_jp)
 
