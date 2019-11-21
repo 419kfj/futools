@@ -50,6 +50,18 @@ mosaic_jp1 <- function(.tbl,mtitle="mosaic_jp",colset="Set3"){
          main=mtitle,
          labeling = labeling_values)
 }
+# このあと、
+# labeling_cells(text = round(100*prop.table(.tbl,1),1))(.tbl)　のように表示するデータを指示する。
+mosaic_jp1cell <- function(.tbl,mtitle="mosaic_jp",colset="Set3"){
+  nc <- (dim(.tbl))[2]
+  mosaic(.tbl,gp=gpar(fill=brewer.pal(nc,colset),col=0),
+         margins = c(left = 5,top = 4),
+         labeling_args=my.largs,
+         main_gp = my.main, sub_gp = my.sub,
+         rot_labels = c(left = 0, top = 45,right=0),
+         keep_aspect_ratio=FALSE,
+         main=mtitle)
+}
 
 mosaic_jp2 <- function(.tbl,mtitle="mosaic_jp",...){
   mosaic(.tbl,...,
