@@ -56,7 +56,7 @@ mosaic_jp2(HairEyeColor_jp,gp=gpar(fill=cset,col=0))
 
 # Pearson residulas
 mosaic_jp2(HairEyeColor_jp,shade=TRUE)
-}
+
 ```
 
 # 参考文献
