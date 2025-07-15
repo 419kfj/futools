@@ -30,9 +30,9 @@ text_gp <- gpar(fontsize = 12,fontfamily = "sans")# for facet
 #'@export
 mosaic_jp <- function(.tbl,...){
   mosaic(.tbl,
-         labeling_args=my.largs,
-         main_gp = my.main,
-         sub_gp = my.sub,
+#         labeling_args=my.largs,
+#         main_gp = my.main,
+#         sub_gp = my.sub,
          ...)
 }
 
@@ -45,8 +45,8 @@ mosaic_jp1 <- function(.tbl,mtitle="mosaic_jp",colset="Set3"){
   nc <- (dim(.tbl))[2]
   mosaic(.tbl,gp=gpar(fill=brewer.pal(nc,colset),col=0),
          margins = c(left = 5,top = 4),
-         labeling_args=my.largs,
-         main_gp = my.main, sub_gp = my.sub,
+#         labeling_args=my.largs,
+#         main_gp = my.main, sub_gp = my.sub,
          rot_labels = c(left = 0, top = 45,right=0),
          keep_aspect_ratio=FALSE,
          main=mtitle,
@@ -59,8 +59,8 @@ mosaic_jp1cell <- function(.tbl,mtitle="mosaic_jp",colset="Set3"){
   nc <- (dim(.tbl))[2]
   mosaic(.tbl,gp=gpar(fill=brewer.pal(nc,colset),col=0),
          margins = c(left = 5,top = 4),
-         labeling_args=my.largs,
-         main_gp = my.main, sub_gp = my.sub,
+#         labeling_args=my.largs,
+#         main_gp = my.main, sub_gp = my.sub,
          rot_labels = c(left = 0, top = 45,right=0),
          keep_aspect_ratio=FALSE,
          main=mtitle)
@@ -70,8 +70,8 @@ mosaic_jp1cell <- function(.tbl,mtitle="mosaic_jp",colset="Set3"){
 mosaic_jp2 <- function(.tbl,mtitle="mosaic_jp",...){
   mosaic(.tbl,...,
          margins = c(left = 5,top = 4),
-         labeling_args=my.largs,
-         main_gp = my.main,sub_gp = my.sub,
+#         labeling_args=my.largs,
+#         main_gp = my.main,sub_gp = my.sub,
          rot_labels = c(left = 0, top = 45,right=0),
          keep_aspect_ratio=FALSE,
          main=mtitle,
