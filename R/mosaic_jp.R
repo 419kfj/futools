@@ -27,6 +27,7 @@ text_gp <- gpar(fontsize = 12,fontfamily = "sans")# for facet
 #
 # wapper of moisac
 #
+#'@export
 mosaic_jp <- function(.tbl,...){
   mosaic(.tbl,
          labeling_args=my.largs,
@@ -36,9 +37,10 @@ mosaic_jp <- function(.tbl,...){
 }
 
 #
-# colset is the col name of RColorbrewer ex: "Pastel1", "Blues"
-# library(RColorBrewer)
-# display.brewer.all(n=10, exact.n=FALSE) # you can see the color palette
+#' colset is the col name of RColorbrewer ex: "Pastel1", "Blues"
+#' library(RColorBrewer)
+#' display.brewer.all(n=10, exact.n=FALSE) # you can see the color palette
+#'@export
 mosaic_jp1 <- function(.tbl,mtitle="mosaic_jp",colset="Set3"){
   nc <- (dim(.tbl))[2]
   mosaic(.tbl,gp=gpar(fill=brewer.pal(nc,colset),col=0),
@@ -50,8 +52,9 @@ mosaic_jp1 <- function(.tbl,mtitle="mosaic_jp",colset="Set3"){
          main=mtitle,
          labeling = labeling_values)
 }
-# このあと、
-# labeling_cells(text = round(100*prop.table(.tbl,1),1))(.tbl)　のように表示するデータを指示する。
+#' このあと、
+#' labeling_cells(text = round(100*prop.table(.tbl,1),1))(.tbl)　のように表示するデータを指示する。
+#'@export
 mosaic_jp1cell <- function(.tbl,mtitle="mosaic_jp",colset="Set3"){
   nc <- (dim(.tbl))[2]
   mosaic(.tbl,gp=gpar(fill=brewer.pal(nc,colset),col=0),
@@ -63,6 +66,7 @@ mosaic_jp1cell <- function(.tbl,mtitle="mosaic_jp",colset="Set3"){
          main=mtitle)
 }
 
+#'@export
 mosaic_jp2 <- function(.tbl,mtitle="mosaic_jp",...){
   mosaic(.tbl,...,
          margins = c(left = 5,top = 4),
@@ -77,7 +81,7 @@ mosaic_jp2 <- function(.tbl,mtitle="mosaic_jp",...){
 #
 # doubledecker でも日本語を使う。
 # doubledecker はmosaicのwrapperなので、同じ設定でよい
-
+#'@export
 doubledecker_jp <- function(...){
   vcd::doubledecker(
     labeling_args=my.largs,
