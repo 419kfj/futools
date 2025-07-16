@@ -50,7 +50,8 @@
 </h1></div>
 <p>このPackageは、vcdが提供するmosaic などのグラフ生成ツールで日本語を使えるようにするものです。</p>
 <p>カテゴリカルデータの可視化には、Michael Friendly先生たちのvcd（その名もずばり、Visualizing of Categorical Data：カテゴリカルデータの可視化）が有効なことはいろいろなところでこのパッケージが紹介されていることからもわかります。ただ、グラフィックがbase graphics ではなく、（latticeやggplot2でも使われている）gridであることもあり、日本語表示が簡単ではありませんでした。</p>
-<p>しかし、gpar に日本語フォントを指定することでmosaicなどのvcd function で日本語がつかえるようになります。</p>
+<p><del>しかし、gpar に日本語フォントを指定することでmosaicなどのvcd function で日本語がつかえるようになります。</del></p>
+<p>日本語などシステムフォントをグラフで表示させるには、<code>showtext</code> というパッケージを使って(<code><a href="https://github.com/yixuan/showtext" class="external-link">library(showtext)</a></code>) 、<code>showtext_auto(TRUE)</code> を指定すればOKです。</p>
 <p>当初は、一々mosaic()の中にパラメータで書いていたのですが、さすがに面倒になったので、wrapper をパッケージにしてみました。</p>
 <p>Github からインストールできますので、使ってみてください。</p>
 <div class="section level2">
@@ -96,14 +97,11 @@
 <h1 id="参考文献">参考文献<a class="anchor" aria-label="anchor" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"></a>
 </h1>
 <ul>
-<li>藤本一男,2017, 「二つのmosaic plotと日本語表示」 <a href="https://www.slideshare.net/kazuofujimoto/2mosaic-plot-80084536" class="external-link uri">https://www.slideshare.net/kazuofujimoto/2mosaic-plot-80084536</a>
-</li>
-<li>藤本一男,2017, 「vcd/vcdExtra で日本語を使う その2」 <a href="https://www.slideshare.net/kazuofujimoto/use-japanese-with-vcdvcdextra-package" class="external-link uri">https://www.slideshare.net/kazuofujimoto/use-japanese-with-vcdvcdextra-package</a>
-</li>
-<li>David Meyer, Achim Zeileis, Kurt Hornik , 2007, The Strucplot Framework: Visualizing Multi-way Contingency Tables with vcd, Journal of Statistical Software,Vol17, <a href="https://www.jstatsoft.org/index.php/jss/article/view/v017i03/v17i03.pdf" class="external-link uri">https://www.jstatsoft.org/index.php/jss/article/view/v017i03/v17i03.pdf</a>
-</li>
-<li>Michael Friendly,2017, Working with categorical data with R and the vcd and vcdExtra packages, <a href="https://cran.r-project.org/web/packages/vcdExtra/vignettes/vcd-tutorial.pdf" class="external-link uri">https://cran.r-project.org/web/packages/vcdExtra/vignettes/vcd-tutorial.pdf</a>
-</li>
+<li><p>藤本一男,2017, 「二つのmosaic plotと日本語表示」 <a href="https://www.slideshare.net/kazuofujimoto/2mosaic-plot-80084536" class="external-link uri">https://www.slideshare.net/kazuofujimoto/2mosaic-plot-80084536</a></p></li>
+<li><p>藤本一男,2017, 「vcd/vcdExtra で日本語を使う その2」 <a href="https://www.slideshare.net/kazuofujimoto/use-japanese-with-vcdvcdextra-package" class="external-link uri">https://www.slideshare.net/kazuofujimoto/use-japanese-with-vcdvcdextra-package</a></p></li>
+<li><p>David Meyer, Achim Zeileis, Kurt Hornik , 2007, The Strucplot Framework: Visualizing Multi-way Contingency Tables with vcd, Journal of Statistical Software,Vol17, <a href="https://www.jstatsoft.org/index.php/jss/article/view/v017i03/v17i03.pdf" class="external-link uri">https://www.jstatsoft.org/index.php/jss/article/view/v017i03/v17i03.pdf</a></p></li>
+<li><p>Michael Friendly,2017, Working with categorical data with R and the vcd and vcdExtra packages, <a href="https://cran.r-project.org/web/packages/vcdExtra/vignettes/vcd-tutorial.pdf" class="external-link uri">https://cran.r-project.org/web/packages/vcdExtra/vignettes/vcd-tutorial.pdf</a></p></li>
+<li><p>Zach Bogart, Joyce Robbins,“edav course”” , <a href="https://jtr13.github.io/EDAVold/mosaic.html" class="external-link uri">https://jtr13.github.io/EDAVold/mosaic.html</a></p></li>
 </ul>
 </div>
 
