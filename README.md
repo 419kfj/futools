@@ -42,12 +42,21 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(vcd)
-#> 要求されたパッケージ grid をロード中です
+```
+
+    ## 要求されたパッケージ grid をロード中です
+
+``` r
 library(RColorBrewer)
 library(futools)
 library(showtext)
-#> 要求されたパッケージ sysfonts をロード中です
-#> 要求されたパッケージ showtextdb をロード中です
+```
+
+    ## 要求されたパッケージ sysfonts をロード中です
+
+    ## 要求されたパッケージ showtextdb をロード中です
+
+``` r
 showtext_auto(TRUE)
 
 # data set
@@ -57,32 +66,29 @@ data(HairEyeColor_jp)
 mosaic_jp(HairEyeColor_jp)
 ```
 
-![](README-example-1.png)<!-- -->
+![](man/figures/README-example-1.png)<!-- -->
 
 ``` r
-
 # without cell color
 mosaic_jp2(HairEyeColor_jp)
 ```
 
-![](README-example-2.png)<!-- -->
+![](man/figures/README-example-2.png)<!-- -->
 
 ``` r
-
 # set cell color by color matrix
 cset <- t(matrix(rep(brewer.pal(4,"Blues"),2),ncol=2))
 mosaic_jp2(HairEyeColor_jp,gp=gpar(fill=cset,col=0))
 ```
 
-![](README-example-3.png)<!-- -->
+![](man/figures/README-example-3.png)<!-- -->
 
 ``` r
-
 # Pearson residulas
 mosaic_jp2(HairEyeColor_jp,shade=TRUE)
 ```
 
-![](README-example-4.png)<!-- -->
+![](man/figures/README-example-4.png)<!-- -->
 
 # 参考文献
 
