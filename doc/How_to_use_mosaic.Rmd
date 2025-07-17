@@ -1,0 +1,109 @@
+---
+title: "How to use vcd::mosaic"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How_to_use_mosaic}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 4, fig.height = 4, dpi = 150
+)
+
+```
+
+```{r setup}
+library(futools)
+library(tidyverse)
+library(vcd)
+```
+
+# 本稿の目的
+
+- vcd::mosaicを使う際のtipsを整理する
+
+# vcd::mosaic とはなにか
+
+## mosaic plotとはなにか
+
+mosaic plotは、帯棒グラフの拡張版と理解できる。帯棒グラフでは、nの値がことなる「棒」であっても、棒の高さが同じに表示されるために、全体の分布の中での評価をあやまることがある。mosaic plotは、セルの面積で度数を表現するので、n= がグラフ表現の中に組み込まれた「帯棒グラフ」を考えることできる。
+
+CRANに登録されているpackgeのDESCRIPTION
+
+**Description** 
+Visualization techniques, data sets, summary and inference procedures aimed particularly at categorical data. Special emphasis is given to highly extensible grid graphics. The package was package was originally inspired by the book ``Visualizing Categorical Data'' by Michael Friendly and is now the main support package for a new book, ``Discrete Data Analysis with R'' by Michael Friendly and David Meyer (2015).
+
+
+## base::mosaicplot との違いはなにか
+
+baseにもmosaicplotがある。しかし、入力された表`table`の行と列の位置が逆になっている。加えて、vcd::mosaicには、以下に述べる機能的な特徴がある。
+
+## ggplot2のggmosaicとの違いはなにか
+
+ggmosaicは、表のグラフ表示をggplotベースで実現したものである。
+
+## vcd::mosaic の「表の表示」以上の機能
+
+- 残差表示
+- 対数線形モデルでのモデルごとのfittingの表示
+
+# vcd::mosaicの使い方
+
+## install
+
+Package タブで`vcd`のインストールを行い、.Rや.Rmdでは、library(vcd)を実行。
+
+関連するものとして、`vcdExtra`、そして、必要であれば、日本語データや、設定パラメータを用意してある`futools`もインストールしておく。
+
+```{r}
+data("HairEyeColor") # 髪の色と目の色の対応関係を集計した３元クロス表
+```
+
+```{r}
+HairEyeColor
+```
+
+```{r}
+ftable(HairEyeColor,row.vars = c("Sex","Hair"))
+```
+
+- futooltsで提供している、`HairEyeColor_jp`、`HairEyeColor_kr`は、それぞれ表のカテゴリラベルを日本語、韓国語にしたものである。
+
+
+# vcd::mosaicの基本形
+
+## HairEyeColor を表示する
+
+```{r}
+HairEyeColor %>% mosaic()
+```
+
+## 標準化残差を表示する
+
+```{r}
+HairEyeColor %>% mosaic(shade = TRUE)
+```
+
+## 「性別」のラベルが重なってしまっているので、90度回転する
+
+```{r}
+HairEyeColor %>% mosaic(rot_labels = c(left = 0, top = 0, right = 0),)
+```
+
+- maegin設定はのちほど。
+
+
+##　性別ごとに髪の色と目の色の対応を表示する
+
+
+```{r}
+HairEyeColor %>% mosaic(Eye ~ Sex + Hair,.,
+                        rot_labels = c(left = 0, top = 0, right = 0))
+```
+
+## 
+
