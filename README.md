@@ -33,7 +33,10 @@ Github からインストールできますので、使ってみてください�
 githubから以下のようにしてインストールできます：
 
 ``` r
-# install.packages("devtools")
+if (!require(devtools)){
+    install.packages('devtools')
+    library(devtools)
+}
 devtools::install_github("419kfj/futools")
 ```
 
