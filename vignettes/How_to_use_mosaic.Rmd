@@ -20,6 +20,9 @@ knitr::opts_chunk$set(
 library(futools)
 library(tidyverse)
 library(vcd)
+library(RColorBrewer)
+library(showtext)
+showtext_auto(TRUE)
 ```
 
 # 本稿の目的
@@ -105,5 +108,41 @@ HairEyeColor %>% mosaic(Eye ~ Sex + Hair,.,
                         rot_labels = c(left = 0, top = 0, right = 0))
 ```
 
-## 
+# 日本語ラベルデータを使う
+
+```{r}
+# data set
+data(HairEyeColor_jp)
+```
+
+
+```{r}
+mosaic(HairEyeColor,shade = TRUE)
+```
+
+
+```{r}
+# plain mosaic_jp
+mosaic_jp(HairEyeColor_jp)
+```
+
+
+```{r}
+# without cell color
+mosaic_jp2(HairEyeColor_jp)
+```
+
+
+```{r}
+# set cell color by color matrix
+cset <- t(matrix(rep(brewer.pal(4,"Blues"),2),ncol=2))
+mosaic_jp2(HairEyeColor_jp,gp=gpar(fill=cset,col=0))
+```
+
+
+```{r}
+# Pearson residulas
+mosaic_jp2(HairEyeColor_jp,shade=TRUE)
+```
+
 
