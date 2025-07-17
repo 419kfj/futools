@@ -2,7 +2,7 @@
 title: "How to use vcd::mosaic"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{How_to_use_mosaic}
+  %\VignetteIndexEntry{How to use vcd::mosaic}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
